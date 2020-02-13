@@ -1,0 +1,134 @@
+<html>
+<html lang="en">
+<style>
+.center{
+display:block;
+margin-left:auto;
+margin-right:auto;
+width:50%;
+}
+.mydiv {
+    background-color:white;
+}
+
+
+</style>
+<style>
+body {
+  background-image: url('https://images.pexels.com/photos/669578/pexels-photo-669578.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+<style>
+    .link { color: #FFFFFF; } /* CSS link color */
+	.link:focus, .link:hover {
+    background-color:aqua;
+}
+  </style>
+
+
+<head><title>View Appointments</title>
+  
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body  class="container"  >
+	
+	<img src="ccc.png" alt="FITNESS FREAKzzz" width=800px height=200px class="center">
+
+ 
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="link" href="Landing Page.html" >Home</a>
+      </li>&nbsp;&nbsp;
+&nbsp;
+
+      <li >
+        <a class="link" href="Place Fitness Trainer Appointment.html" >Place-fit-trainer-Appointment</a>
+      </li>&nbsp;&nbsp;&nbsp;
+      <li >
+        <a class="link" href="View Appointments.html" >View-all-Appointment</a>
+      </li> 
+      <li >&nbsp;&nbsp;&nbsp;
+        <a class="link" href="Contact Us.html" >Contact Us</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+<div class="mydiv">
+  <table class="table"  id="tblList">
+     <thead>
+       <tr>
+         
+         <th>Name</th>
+         <th>Add</th>
+         <th>City</th>
+         <th>Package</th>
+         <th>Trainer Preference</th>
+         <th>Phone</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         
+         <td id="n"></td>
+         <td id="a"></td>
+         <td id="c"></td>
+         <td id="p"></td>
+         <td id="tp"></td>
+         <td id="phn"></td>
+       </tr>
+       </tbody>
+       </table>
+       </div>
+       <script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script>
+
+  var tbClients = localStorage.getItem("tbClients1");//Retrieve the stored data
+ 
+   tbClients = JSON.parse(tbClients); //Converts string to object
+ 
+   if(tbClients == null) //If there is no data, initialize an empty array
+ 
+    tbClients = [];
+ 
+ 
+ 
+         alert(tbClients);
+ 
+         $("#tblList").html(""); $("#tblList").html( "<thead>"+ " <tr>"+ " <th></th>"+ " <th>firstName</th>"+ " <th>street</th>"+ " <th>city</th>"+"<th>package</th>"+"<th>TrainerPreference</th>"+ " <th>contact</th>"+ " </tr>"+ "</thead>"+ "<tbody>"+ "</tbody>" );
+ 
+ 
+ 
+         for(var i in tbClients){ var cli = JSON.parse(tbClients[i]);
+ 
+         $("#tblList tbody").append("<tr>"+ "<td></td>"+" <td>"+cli.firstName+"</td>" + " <td>"+cli.street+"</td>" + " <td>"+cli.city+"</td>" +"<td>"+cli.inr+"</td>"+"<td>"+cli.trainerName+"</td>"+ " <td>"+cli.phone+"</td>" + "</tr>"); }
+ 
+ 
+ 
+     </script>
+    </body>
+</html>
